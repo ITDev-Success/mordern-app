@@ -5,8 +5,7 @@ import {
   IonContent,
   IonHeader,
   IonTitle,
-  IonToolbar,
-} from '@ionic/angular/standalone';
+  IonToolbar, IonButtons, IonBackButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonText, IonCardContent, IonLabel, IonList, IonItem, IonIcon } from '@ionic/angular/standalone';
 import { MovieService } from '../services/movie.service';
 import { environment } from 'src/environments/environment';
 import { MovieResult } from '../services/interfaces';
@@ -18,7 +17,7 @@ import {cashOutline, calendarOutline} from 'ionicons/icons'
   templateUrl: './details.page.html',
   styleUrls: ['./details.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonIcon, IonItem, IonList, IonLabel, IonCardContent, IonText, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonBackButton, IonButtons, 
     IonContent,
     IonHeader,
     IonTitle,
@@ -38,7 +37,7 @@ export class DetailsPage implements OnInit {
       console.log(movie)
     })
   }
-  constructor() {addIcons({cashOutline, calendarOutline})}
+  constructor() {addIcons({calendarOutline,cashOutline});}
 
   ngOnInit() {}
 }
